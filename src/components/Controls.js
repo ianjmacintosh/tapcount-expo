@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./Controls.css";
+import { Text } from "react-native";
+
+// import "./Controls.css";
 
 class Controls extends React.Component {
     static propTypes = {
@@ -38,16 +40,19 @@ class Controls extends React.Component {
     }
 
     render() {
-        return (<div data-testid="controls-component" className="controls">
-            <ul>
-                <li>
-                    <button className="pause-button" onMouseDown={this.handlePauseButtonClick} data-testid="pause-button">Start/Stop</button>
-                </li>
-                <li>
-                    <button className="reset-button" onMouseDown={this.handleResetButtonClick} data-testid="reset-button">Reset</button>
-                </li>
-            </ul>
-        </div>)
+        return (
+            <Text>Controls</Text>
+        // <div data-testid="controls-component" className="controls">
+        //     <ul>
+        //         <li>
+        //             <button className="pause-button" onMouseDown={this.handlePauseButtonClick} data-testid="pause-button">Start/Stop</button>
+        //         </li>
+        //         <li>
+        //             <button className="reset-button" onMouseDown={this.handleResetButtonClick} data-testid="reset-button">Reset</button>
+        //         </li>
+        //     </ul>
+        // </div>
+        )
     }
 }
 

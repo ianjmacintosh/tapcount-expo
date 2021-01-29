@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { getTimeObject } from "../utilities/utilities";
+import { Text } from 'react-native';
 
-import "./Timer.css"
+// import "./Timer.css"
 
 class Timer extends React.Component {
     componentDidMount() {
@@ -36,14 +37,17 @@ class Timer extends React.Component {
     }
 
     render() {
-        return (<div className={"timer " + (!this.props.isTimerActive && this.props.didTimerStart ? "paused" : "")} data-testid="timer-component">
-            <time id="time" data-testid="time" data-elapsedtime={this.props.elapsedTime} className={this.props.settingMax ? "editable" : ""}>
-                <span data-testid="hours">{this.state.hours < 10 ? "0" + this.state.hours : this.state.hours}</span>:
-                <span data-testid="minutes">{this.state.minutes < 10 ? "0" + this.state.minutes : this.state.minutes}</span>:
-                <span data-testid="seconds">{this.state.seconds < 10 ? "0" + this.state.seconds : this.state.seconds}</span>.
-                <span data-testid="milliseconds">{this.state.milliseconds === 10 ? "0" : this.state.milliseconds}</span>
-            </time>
-        </div>);
+        return (
+            <Text>Timer</Text>
+        // <div className={"timer " + (!this.props.isTimerActive && this.props.didTimerStart ? "paused" : "")} data-testid="timer-component">
+        //     <time id="time" data-testid="time" data-elapsedtime={this.props.elapsedTime} className={this.props.settingMax ? "editable" : ""}>
+        //         <span data-testid="hours">{this.state.hours < 10 ? "0" + this.state.hours : this.state.hours}</span>:
+        //         <span data-testid="minutes">{this.state.minutes < 10 ? "0" + this.state.minutes : this.state.minutes}</span>:
+        //         <span data-testid="seconds">{this.state.seconds < 10 ? "0" + this.state.seconds : this.state.seconds}</span>.
+        //         <span data-testid="milliseconds">{this.state.milliseconds === 10 ? "0" : this.state.milliseconds}</span>
+        //     </time>
+        // </div>
+        );
     }
 }
 

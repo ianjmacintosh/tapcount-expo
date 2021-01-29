@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./Counter.css"
+import { Text } from "react-native";
+
+// import "./Counter.css"
 
 class Counter extends React.Component {
     static propTypes = {
@@ -13,9 +15,12 @@ class Counter extends React.Component {
     }
 
     render() {
-        return (<div className={"counter " + (!this.props.isTimerActive && this.props.didTimerStart ? "paused" : "")} data-testid="counter-component">
-            <span id="count" data-testid="count" className={this.props.settingMax ? "editable" : ""}>{this.props.count}</span>
-        </div>);
+        return (
+            <Text>Counter</Text>
+        // <div className={"counter " + (!this.props.isTimerActive && this.props.didTimerStart ? "paused" : "")} data-testid="counter-component">
+        //     <span id="count" data-testid="count" className={this.props.settingMax ? "editable" : ""}>{this.props.count}</span>
+        // </div>
+        );
     }
 }
 

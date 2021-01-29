@@ -1,14 +1,14 @@
 import React from "react";
 // import '../App.css';
 
-// import Panel from "./Panel";
-// import Counter from "./Counter";
-// import Timer from "./Timer";
-// import Statistics from "./Statistics";
-// import Controls from "./Controls";
+import Panel from "./Panel";
+import Counter from "./Counter";
+import Timer from "./Timer";
+import Statistics from "./Statistics";
+import Controls from "./Controls";
 
-// import { getTimeObject } from "../utilities/utilities";
-import { Text } from 'react-native';
+import { getTimeObject } from "../utilities/utilities";
+import { ScrollView, Text } from 'react-native';
 
 class App extends React.Component {
   state = {
@@ -119,47 +119,42 @@ class App extends React.Component {
 
   render() {
     return (
-      <Text>Hello from the App</Text>
-      // <div
-      //   className={"App " +
-      //     (!this.state.isTimerActive ? "paused ": "") +
-      //     (this.state.elapsedTime !== 0 ? "started " : "") +
-      //     (this.state.isPanelOpen ? "panel-open " : "")
-      //   }
-      //   data-testid="app-component"
-      //   onMouseDown={this.handleClick}>
-      //   <Panel
-      //     isOpen={this.state.isPanelOpen}
-      //     closePanel={this.closePanel}
-      //     resetCount={this.resetCount}
-      //     resetTime={this.resetTime}>
-      //     <Statistics
-      //       count={this.state.count}
-      //       elapsedTime={this.state.elapsedTime}
-      //       timeObject={getTimeObject(this.state.elapsedTime)}/>
-      //   </Panel>
-      //   <div className="main-area">
-      //     <Counter
-      //       count={this.state.count}
-      //       setCount={this.setCount}
-      //       settingMax={this.state.settingMaxCount}
-      //       isTimerActive={this.state.isTimerActive}
-      //       didTimerStart={this.state.elapsedTime !== 0}/>
-      //     <Timer
-      //       elapsedTime={this.state.elapsedTime}
-      //       settingMax={this.state.settingMaxTime}
-      //       isTimerActive={this.state.isTimerActive}
-      //       didTimerStart={this.state.elapsedTime !== 0} />
-      //     <Controls
-      //       openPanel={this.openPanel}
-      //       resetCount={this.resetCount}
-      //       resetTime={this.resetTime}
-      //       pauseTimer={this.pauseTimer}
-      //       startTimer={this.startTimer}
-      //       enterMaxMode={this.enterMaxMode}
-      //       isTimerActive={this.state.isTimerActive}/>
-      //   </div>
-      // </div>
+      <ScrollView>
+        <Text>The whole app should go in here</Text>
+        <Panel
+          isOpen={this.state.isPanelOpen}
+          closePanel={this.closePanel}
+          resetCount={this.resetCount}
+          resetTime={this.resetTime}>
+          <Statistics
+            count={this.state.count}
+            elapsedTime={this.state.elapsedTime}
+            timeObject={getTimeObject(this.state.elapsedTime)}/>
+        </Panel>
+
+        {/* Main Area */}
+        <ScrollView>
+            <Counter
+              count={this.state.count}
+              setCount={this.setCount}
+              settingMax={this.state.settingMaxCount}
+              isTimerActive={this.state.isTimerActive}
+              didTimerStart={this.state.elapsedTime !== 0}/>
+            <Timer
+              elapsedTime={this.state.elapsedTime}
+              settingMax={this.state.settingMaxTime}
+              isTimerActive={this.state.isTimerActive}
+              didTimerStart={this.state.elapsedTime !== 0} />
+            <Controls
+              openPanel={this.openPanel}
+              resetCount={this.resetCount}
+              resetTime={this.resetTime}
+              pauseTimer={this.pauseTimer}
+              startTimer={this.startTimer}
+              enterMaxMode={this.enterMaxMode}
+              isTimerActive={this.state.isTimerActive}/>
+        </ScrollView>
+      </ScrollView>
     );
   }
 }

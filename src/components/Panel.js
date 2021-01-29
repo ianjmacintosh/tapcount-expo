@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Panel.css";
+// import "./Panel.css";
 
 class Panel extends React.Component {
     handlePanelBackgroundClick = (e) => {
@@ -18,12 +18,14 @@ class Panel extends React.Component {
     render() {
         if (this.props.isOpen) {
             return (
-                <div className="panel" data-testid="panel-component">
-                    <div className="panel-backdrop" data-testid="panel-backdrop" onMouseDown={this.handlePanelBackgroundClick} />
-                    <div className="panel-content" onMouseDown={this.handlePanelContentClick}>
-                        {this.props.children}
-                    </div>
-                </div>);
+                <Text>Panel</Text>
+                // <div className="panel" data-testid="panel-component">
+                //     <div className="panel-backdrop" data-testid="panel-backdrop" onMouseDown={this.handlePanelBackgroundClick} />
+                //     <div className="panel-content" onMouseDown={this.handlePanelContentClick}>
+                //         {this.props.children}
+                //     </div>
+                // </div>
+                );
     } else {
         return null;
     }

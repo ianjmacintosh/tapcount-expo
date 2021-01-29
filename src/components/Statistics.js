@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import './Statistics.css';
+// import './Statistics.css';
 
 class Statistics extends React.Component {
     static propTypes = {
