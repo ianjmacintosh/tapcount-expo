@@ -1,0 +1,43 @@
+.panel {
+  --panel-backdrop: rgba(0, 0, 0, 0.85);
+  --dialog-bg: #353535;
+  --dialog-border: #c2f261;
+  --dialog-color: #c2f261;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+}
+
+.panel-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--panel-backdrop);
+  display: flex;
+  font-size: 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.panel-content {
+  border: solid 4px var(--dialog-border);
+  padding: 20px;
+  background: var(--dialog-bg);
+  color: var(--dialog-color);
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+  width: 80%;
+  cursor: auto;
+  z-index: 3;
+  position: relative;
+  font-size: 20px;
+}

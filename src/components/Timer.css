@@ -1,0 +1,19 @@
+@import "../utilities/animations.css";
+
+.timer {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.started.paused .timer {
+  animation: 2s infinite steps(1, start) blink;
+}
+
+.paused.panel-open .timer {
+  animation: none;
+}
+
+.editable {
+  color: red;
+}

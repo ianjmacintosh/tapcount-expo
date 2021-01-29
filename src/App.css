@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap");
+
+html,
+body {
+  height: 100%;
+  background-color: #353535;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+  display: grid;
+}
+
+.App {
+  background-color: #353535;
+  color: #c2f261;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 36px;
+}
+
+.main-area {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  grid-template-rows: 2fr 1fr auto;
+  user-select: none;
+}
+
+::selection {
+  background: #c2f261;
+  color: #353535;
+}

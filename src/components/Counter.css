@@ -1,0 +1,20 @@
+@import "../utilities/animations.css";
+
+.counter {
+  font-size: 20vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.started.paused .counter {
+  animation: 2s infinite steps(1, start) blink;
+}
+
+.paused.panel-open .counter {
+  animation: none;
+}
+
+.editable {
+  color: red;
+}
