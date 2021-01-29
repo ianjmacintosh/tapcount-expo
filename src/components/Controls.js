@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Text } from "react-native";
+import { Pressable, ScrollView, Text } from "react-native";
 
 // import "./Controls.css";
 
@@ -41,17 +41,14 @@ class Controls extends React.Component {
 
     render() {
         return (
-            <Text>Controls</Text>
-        // <div data-testid="controls-component" className="controls">
-        //     <ul>
-        //         <li>
-        //             <button className="pause-button" onMouseDown={this.handlePauseButtonClick} data-testid="pause-button">Start/Stop</button>
-        //         </li>
-        //         <li>
-        //             <button className="reset-button" onMouseDown={this.handleResetButtonClick} data-testid="reset-button">Reset</button>
-        //         </li>
-        //     </ul>
-        // </div>
+            <ScrollView>
+                <Pressable onPressIn={this.handlePauseButtonClick}>
+                    <Text>Start/Stop</Text>
+                </Pressable>
+                <Pressable onPressIn={this.handleResetButtonClick}>
+                    <Text>Reset</Text>
+                </Pressable>
+            </ScrollView>
         )
     }
 }

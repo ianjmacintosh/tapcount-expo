@@ -2,6 +2,8 @@ import React from "react";
 
 // import "./Panel.css";
 
+import { Text } from "react-native";
+
 class Panel extends React.Component {
     handlePanelBackgroundClick = (e) => {
         e.stopPropagation();
